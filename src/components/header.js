@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Head() {
+const Head = () => (
   <div className="head">
     <div className="logo">
       <Link to="/" className="head-link">
@@ -14,7 +14,7 @@ function Head() {
       {' '}
       <span> The Globe</span>
     </div>
-  </div>;
-}
+  </div>
+);
 
 export default Head;

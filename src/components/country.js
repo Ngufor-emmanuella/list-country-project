@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchDetailsCountry, getchoosenCountry } from '../redux/configReducers';
 
-function Country() {
+const Country = () => {
   const { name } = useParams();
   const dispatch = useDispatch();
 

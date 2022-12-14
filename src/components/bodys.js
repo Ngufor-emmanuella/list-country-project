@@ -2,11 +2,11 @@ import React from 'react';
 import OtherC from './otherC';
 import Form from './form';
 
-function fullPart() {
+const FullPart = () => (
   <div>
     <Form />
     <OtherC />
-  </div>;
-}
+  </div>
+);
 
-export default fullPart;
+export default FullPart;

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchSearchDetails } from '../redux/configReducers';
 
-function Form() {
+const Form = () => {
   const [file, setFile] = useState('');
   const dispatch = useDispatch();
   const formHandler = (e) => {
@@ -22,6 +22,6 @@ function Form() {
       </form>
     </div>
   );
-}
+};
 
 export default Form;

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAllCountries, fetchCountries } from '../redux/configReducers';
 
-function OtherC() {
+const OtherC = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -49,6 +49,6 @@ function OtherC() {
 }
     </div>
   );
-}
+};
 
 export default OtherC;
