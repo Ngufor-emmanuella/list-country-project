@@ -17,7 +17,8 @@ function Form() {
         <input type="text" name="search" id="search" placeholder="search country here" className="search-country" onChange={(e) => setFile(e.target.value)} value={file} />
         <button type="submit" className="btn-search" aria-label="search-country">
           search
-          <i className="fa-solid fa-magnifying-glass-plus" /></button>
+          <i className="fa-solid fa-magnifying-glass-plus" />
+        </button>
       </form>
     </div>
   );

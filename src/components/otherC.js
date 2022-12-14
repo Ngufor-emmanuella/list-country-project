@@ -8,7 +8,7 @@ function OtherC() {
 
   useEffect(() => {
     dispatch(fetchCountries());
-  }, []);
+  }, [dispatch]);
 
   const count = useSelector(getAllCountries);
 
@@ -19,11 +19,11 @@ function OtherC() {
         <Link to={`/count/${country.name.common}`} key={country.name.common}>
           <div className="count-continer item">
             <div>
-            <i className="fa-solid fa-arrow-circle-right c-arrow" aria-hidden="true" />
-                {' '}
+              <i className="fa-solid fa-arrow-circle-right c-arrow" aria-hidden="true" />
+              {' '}
             </div>
             <div className="flag-symbol">
-                <img src={country.flags.svg} alt="" />
+              <img src={country.flags.svg} alt="" />
             </div>
             <div className="information item">
               <h1>{country.name.common}</h1>

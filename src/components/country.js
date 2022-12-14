@@ -9,7 +9,7 @@ function Country() {
 
   useEffect(() => {
     dispatch(fetchDetailsCountry(name));
-  }, []);
+  }, [name, dispatch]);
 
   const dataCountry = useSelector(getchoosenCountry);
 
@@ -21,14 +21,14 @@ function Country() {
            <Link to="/">
              <button type="button" className="new-button">
                {' '}
-                <i class="fa-solid fa-arrow-left-long"></i>
+               <i className="fa-solid fa-arrow-left-long" />
                {' '}
                Return
              </button>
            </Link>
 
            <div className="country-country">
-            <i className="fa-solid fa-circle-arrow-right" aria-hidden="true" />
+             <i className="fa-solid fa-circle-arrow-right" aria-hidden="true" />
              {' '}
              <div className="country-mark">
                <img src={dataCountry[0]?.flags?.svg} alt="country flag" />

@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import fullPart from './components/bodys';
 import Country from './components/country';
 import Head from './components/header';
 import './App.css';

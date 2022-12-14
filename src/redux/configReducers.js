@@ -7,8 +7,8 @@ const fetchCountries = createAsyncThunk('countries/fetchCountries', async () => 
 });
 
 const fetchSearchDetails = createAsyncThunk('countries/fetchSearchDetails', async (term) => {
-const dataCountry = await axios.get(`https://restcountries.com/v3.1/name/${term}`);
-return dataCountry.data;
+  const dataCountry = await axios.get(`https://restcountries.com/v3.1/name/${term}`);
+  return dataCountry.data;
 });
 
 const fetchDetailsCountry = createAsyncThunk('countries/fetchDetailsCountry', async (name) => {
@@ -26,15 +26,10 @@ const payeeSlice = createSlice({
   actualState,
   reducers: {},
   moreReducers: {
-    [fetchCountries.fulfilled]: (state, { payload }) => {
-      return { ...state, countries: payload };
-    },
-    [fetchDetailsCountry.fulfilled]: (state, { payload }) => {
-      return { ...state, choosenCountry: payload };
-    },
-    [fetchSearchDetails.fulfilled]: (state, { payload }) => {
-      return { ...state, countries: payload };
-    },
+    [fetchCountries.fulfilled]: (state, { payload }) => ({ ...state, countries: payload }),
+    [fetchSearchDetails.fulfilled]: (state, { payload }) => ({ ...state, countries: payload }),
+    // eslint-disable-next-line max-len
+    [fetchDetailsCountry.fulfilled]: (state, { payload }) => ({ ...state, choosenCountry: payload }),
   },
 });
 
