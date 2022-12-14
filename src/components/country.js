@@ -21,7 +21,7 @@ function Country() {
            <Link to="/">
              <button type="button" className="new-button">
                {' '}
-               <i className="fa-solid fa-arrow-left-long" />
+               <i className="fa-solid fa-arrow-left-long" aria-hidden="true" />
                {' '}
                Return
              </button>

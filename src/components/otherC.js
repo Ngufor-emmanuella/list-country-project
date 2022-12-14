@@ -10,36 +10,36 @@ function OtherC() {
     dispatch(fetchCountries());
   }, [dispatch]);
 
-  const count = useSelector(getAllCountries);
+  const countries = useSelector(getAllCountries);
 
   return (
     <div className="grid-grid">
       {
-      count.map((country) => (
-        <Link to={`/count/${country.name.common}`} key={country.name.common}>
+      countries.map((count) => (
+        <Link to={`/countries/${count.name.common}`} key={count.name.common}>
           <div className="count-continer item">
             <div>
               <i className="fa-solid fa-arrow-circle-right c-arrow" aria-hidden="true" />
               {' '}
             </div>
             <div className="flag-symbol">
-              <img src={country.flags.svg} alt="" />
+              <img src={count.flags.svg} alt="" />
             </div>
             <div className="information item">
-              <h1>{country.name.common}</h1>
+              <h1>{count.name.common}</h1>
               <h2>
                 Capital:
-                <span>{country.capital}</span>
+                <span>{count.capital}</span>
               </h2>
 
               <h2>
                 Region:
-                <span>{country.region}</span>
+                <span>{count.region}</span>
               </h2>
 
               <h2>
                 Population:
-                <span>{country.population}</span>
+                <span>{count.population}</span>
               </h2>
 
             </div>
